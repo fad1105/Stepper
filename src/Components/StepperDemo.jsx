@@ -113,17 +113,13 @@ function HorizontalNonLinearStepper(props) {
 export default function StepperDemo() {
   const classes = useStyles();
   const [currentStep, setCurrentStep] = useState(roundDetail.activeRound);
-  function handleclick(step) {
-    console.log(step);
-    setCurrentStep(step + 1);
-  }
 
   useEffect(() => {}, [currentStep]);
   return (
     <div>
       {/* stepper */}
       <HorizontalNonLinearStepper
-        setCurrentStep={handleclick}
+        setCurrentStep={setCurrentStep}
         currentStep={currentStep}
         sx={{ width: "100%" }}
       />

@@ -80,7 +80,6 @@ function StepperIcon(props) {
   );
 }
 
-
 StepperIcon.propTypes = {
   active: PropTypes.bool,
   completed: PropTypes.bool,
@@ -98,8 +97,8 @@ function HorizontalNonLinearStepper(props) {
       >
         {roundDetail.round.map((label, index) => (
           <Step key={index}>
-            {/* <Step key={index} completed={label.completed} active={label.active}> */}
-            <StepButton onClick={props.setCurrentStep(index)}>
+            
+            <StepButton  onClick={props.setCurrentStep(index)}>
               <StepLabel StepIconComponent={StepperIcon}>
                 {label.name}
               </StepLabel>
